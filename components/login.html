@@ -45,8 +45,8 @@
                 <input
                   type="text"
                   class="form-control form-control-lg"
-                  name="id"
-                  id="id"
+                  name="userId"
+                  id="userId"
                   placeholder="아이디"
                 />
               </div>
@@ -64,7 +64,7 @@
                   <label class="form-check-label" for="flexCheckDefault">아이디 저장</label>
               </div>
               <div class="d-grid col">
-                <button type="button" class="btn btn-success btn-lg">로그인</button>
+                <button type="button" class="btn btn-success btn-lg" onclick="onSubmit()">로그인</button>
               </div>
             </form>
             <div class="search-id">
@@ -91,6 +91,17 @@
       };
       function goToSignUp() {
         location.href = 'signup.html';
+      }
+    </script>
+
+    <script>
+      const onSubmit = () => {
+        const userId = document.getElementById("userId").value;
+        const pwd = document.getElementById("pwd").value;
+
+        if (userId == "" || pwd == "") {
+          alert("아이디 또는 비밀번호가 입력되지 않았습니다.");
+        }
       }
     </script>
   </body>

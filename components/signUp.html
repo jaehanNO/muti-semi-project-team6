@@ -32,6 +32,7 @@
             placeholder="사용하실 아이디를 입력하세요."
             aria-label="Username"
             aria-describedby="basic-addon1"
+            id="userId"
           />
           <button type="button" class="btn btn-outline-secondary">
             ID 중복확인
@@ -45,6 +46,7 @@
             placeholder="사용하실 비밀번호를 입력하세요."
             aria-label="Username"
             aria-describedby="basic-addon1"
+            id="pwd"
           />
         </div>
         <div class="input-group mb-3">
@@ -55,6 +57,7 @@
             placeholder="비밀번호를 다시 한 번 입력해주세요."
             aria-label="Username"
             aria-describedby="basic-addon1"
+            id="pwdCheck"
           />
         </div>
         <div class="input-group mb-3">
@@ -65,6 +68,7 @@
             placeholder="성명"
             aria-label="Username"
             aria-describedby="basic-addon1"
+            id="userName"
           />
         </div>
         <div class="input-group mb-3">
@@ -73,11 +77,13 @@
             class="form-control"
             placeholder="이메일 주소"
             aria-label="Username"
+            id="email"
           />
           <span class="input-group-text">@</span>
           <select
             class="form-select form-select-sm"
             aria-label=".form-select-sm example"
+            id="emailDomain"
           >
             <option selected value="gmail.com">gmail.com</option>
             <option value="naver.com">naver.com</option>
@@ -88,6 +94,7 @@
           <select
             class="form-select form-select-sm"
             aria-label=".form-select-sm"
+            id="phoneNumberHead"
           >
             <option selected value="unselected">전화번호</option>
             <option value="010">010</option>
@@ -103,7 +110,7 @@
           <input type="text" class="form-control" name="" id="phoneNumberEnd" />
         </div>
         <div class="m-4 row">
-          <button type="submit" class="col btn btn-primary m-3" onclick="">
+          <button type="button" class="col btn btn-primary m-3" onclick="onSubmit()">
             가입 하기
           </button>
           <button type="reset" class="col btn btn-secondary m-3">
@@ -112,5 +119,30 @@
         </div>
       </form>
     </div>
+
+    <script>
+      function onSubmit() {
+        const userId = document.getElementById('userId').value;
+        const pwd = document.getElementById('pwd').value;
+        const pwdCheck = document.getElementById('pwdCheck').value;
+        const userName = document.getElementById('userName').value;
+        const email = document.getElementById('email').value;
+        const emailDomain = document.getElementById('emailDomain').value;
+        const phoneNumberHead = document.getElementById('phoneNumberHead').value;
+        const phoneNumberMid = document.getElementById('phoneNumberMid');
+        const phoneNumberEnd = document.getElementById('phoneNumberEnd');
+
+        if (userId == "" || pwd == "" || pwdCheck == "") {
+          alert("입력되지 않은 항목이 있습니다!");
+        } else if (userName == "" || email == "") {
+          alert("입력되지 않은 항목이 있습니다!");
+        } else if (phoneNumberHead == "unselected") {
+          alert("입력되지 않은 항목이 있습니다!");
+        } else if (phoneNumberMid == "" || phoneNumberEnd == "") {
+          alert("입력되지 않은 항목이 있습니다!");
+        }
+
+      }
+    </script>
   </body>
 </html>

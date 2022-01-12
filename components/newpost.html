@@ -41,9 +41,13 @@
         <div class="btn-grp" role="group" aria-label="Basic example">
           <button type="submit" class="btn btn-outline-primary">저장</button>
           <button type="reset" class="btn btn-outline-secondary">다시 쓰기</button>
-          <button type="button" class="btn btn-outline-danger">취소</button>
+          <button type="button" class="btn btn-outline-danger" onclick="goBack()">취소</button>
         </div>
       </form>
     </div>
+
+    <script>
+      const goBack = () => location.href = "./discuss.html";
+    </script>
   </body>
 </html>
