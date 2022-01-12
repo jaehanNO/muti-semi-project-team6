@@ -1,0 +1,18 @@
+.board {
+  padding: 50px;
+}
+
+.table {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btn-grp {
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+  padding-top: 50px;
+  justify-content: flex-end;
+  align-items: flex-end;
+}

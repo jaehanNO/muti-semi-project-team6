@@ -1,0 +1,10 @@
+#wrap {
+  width: 50%;
+  padding: 60px;
+  margin: 0 auto;
+}
+
+#wrap h2 {
+  padding: 60px;
+  text-align: center;
+}
