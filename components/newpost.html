@@ -30,12 +30,26 @@
             type="text"
             class="form-control"
             id="title"
-            placeholder="name@example.com"
+            placeholder=""
+            name="talk_title"
+            id="talk_title"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">작성자</label>
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            placeholder=""
+            name="user_id"
+            id="user_id"
+            readonly
           />
         </div>
         <div class="mb-3">
           <label for="" class="form-label">내용</label>
-          <textarea class="form-control" id="content" rows="10"></textarea>
+          <textarea class="form-control" id="talk_content" name="talk_content" rows="10"></textarea>
         </div>
 
         <div class="btn-grp" role="group" aria-label="Basic example">
@@ -47,7 +61,7 @@
     </div>
 
     <script>
-      const goBack = () => location.href = "./discuss.html";
+      const goBack = () => history.back();
     </script>
   </body>
 </html>

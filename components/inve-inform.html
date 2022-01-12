@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <title>슈퍼개미 : 홈</title>
+    <title>슈퍼개미 : 투자정보</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -33,7 +33,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../css/index.css" />
-    <link rel="stylesheet" href="../css/stock-calendar.css">
+    <link rel="stylesheet" href="../css/board.css">
     
     <script
       defer
@@ -55,7 +55,7 @@
               class="navbar fixed-top navbar-expand-lg navbar-light bg-light"
             >
               <div class="container-fluid">
-                <a class="navbar-brand" href="#">Super Ants</a>
+                <a class="navbar-brand" href="../index.html">Super Ants</a>
                 <button
                   class="navbar-toggler"
                   type="button"
@@ -73,7 +73,7 @@
                 >
                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="./home.html"
+                      <a class="nav-link active" aria-current="page" href="../index.html"
                         >홈</a
                       >
                     </li>
@@ -212,6 +212,8 @@
                   type="text"
                   class="form-control"
                   placeholder="사용하실 ID를 입력하세요."
+                  name="user_id"
+                  id="user_id"
                 />
               </div>
               <div class="input-group mb-3">
@@ -219,6 +221,8 @@
                   type="text"
                   class="form-control"
                   placeholder="사용하실 비밀번호를 입력하세요."
+                  name="user_pw"
+                  id="user_pw"
                 />
               </div>
               <div class="input-group mb-3">
@@ -226,6 +230,8 @@
                   type="text"
                   class="form-control"
                   placeholder="비밀번호 확인"
+                  name="user_pw_check"
+                  id="user_pw_check"
                 />
               </div>
               <div class="input-group mb-3">
@@ -233,9 +239,11 @@
                   type="text"
                   class="form-control"
                   placeholder="이메일 주소"
+                  name="user_emailid"
+                  id="user_emailid"
                 />
                 <span class="input-group-text">@</span>
-                <select class="form-select form-select-sm">
+                <select class="form-select form-select-sm" name="user_emailweb" id="user_emailweb">
                   <option selected value="gmail.com">gmail.com</option>
                   <option value="naver.com">naver.com</option>
                   <option value="outlook.com">outlook.com</option>
@@ -258,7 +266,29 @@
         <!-- Main Contents -->
         <article>
           <div id="app">
-            
+            <div class="board">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">제목</th>
+                    <th scope="col">작성자</th>
+                    <th scope="col">작성일</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">0</th>
+                    <td>test 내용입니다</td>
+                    <td>admin</td>
+                    <td>2022-01-12</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="btn-grp" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-outline-primary" onclick="goToNewPost()">새글 작성</button>
+              </div>
+            </div>
           </div>
         </article>
 
@@ -285,14 +315,12 @@
         <!-- 로그인, 회원가입 버튼 클릭시 페이지 이동 -->
         <script>
           // 로그인 페이지로 이동
-          function goToLogin() {
-            location.href="./login.html"
-          }
+          const goToLogin = () => location.href="./login.html";
 
           // 회원가입 페이지로 이동
-          function goToSignUp() {
-            location.href="./signup.html"
-          }
+          const goToSignUp = () => location.href="./signup.html";
+
+          const goToNewPost = () => location.href="./newpost.html";
         </script>
 
     </div>

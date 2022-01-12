@@ -55,7 +55,7 @@
               class="navbar fixed-top navbar-expand-lg navbar-light bg-light"
             >
               <div class="container-fluid">
-                <a class="navbar-brand" href="#">Super Ants</a>
+                <a class="navbar-brand" href="../index.html">Super Ants</a>
                 <button
                   class="navbar-toggler"
                   type="button"
@@ -212,6 +212,8 @@
                   type="text"
                   class="form-control"
                   placeholder="사용하실 ID를 입력하세요."
+                  name="user_id"
+                  id="user_id"
                 />
               </div>
               <div class="input-group mb-3">
@@ -219,6 +221,8 @@
                   type="text"
                   class="form-control"
                   placeholder="사용하실 비밀번호를 입력하세요."
+                  name="user_pw"
+                  id="user_pw"
                 />
               </div>
               <div class="input-group mb-3">
@@ -226,6 +230,8 @@
                   type="text"
                   class="form-control"
                   placeholder="비밀번호 확인"
+                  name="user_pw_check"
+                  id="user_pw_check"
                 />
               </div>
               <div class="input-group mb-3">
@@ -233,9 +239,11 @@
                   type="text"
                   class="form-control"
                   placeholder="이메일 주소"
+                  name="user_emailid"
+                  id="user_emailid"
                 />
                 <span class="input-group-text">@</span>
-                <select class="form-select form-select-sm">
+                <select class="form-select form-select-sm" name="user_emailweb" id="user_emailweb">
                   <option selected value="gmail.com">gmail.com</option>
                   <option value="naver.com">naver.com</option>
                   <option value="outlook.com">outlook.com</option>

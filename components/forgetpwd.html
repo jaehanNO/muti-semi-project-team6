@@ -35,6 +35,8 @@
             placeholder=""
             aria-label="Username"
             aria-describedby="basic-addon1"
+            name="user_name"
+            id="user_name"
           />
         </div>
         <div class="input-group mb-3">
@@ -45,6 +47,8 @@
             placeholder=""
             aria-label="Username"
             aria-describedby="basic-addon1"
+            name="user_id"
+            id="user_id"
           />
         </div>
         <div class="input-group mb-3">
@@ -53,11 +57,15 @@
             class="form-control"
             placeholder="이메일 주소"
             aria-label="Username"
+            name="user_emailid"
+            id="user_emailid"
           />
           <span class="input-group-text">@</span>
           <select
             class="form-select form-select-sm"
             aria-label=".form-select-sm example"
+            name="user_emailweb"
+            id="user_emailweb"
           >
             <option selected value="gmail.com">gmail.com</option>
             <option value="naver.com">naver.com</option>
@@ -68,6 +76,8 @@
           <select
             class="form-select form-select-sm"
             aria-label=".form-select-sm"
+            id="user_phone_number_head"
+            name="user_phone_number_head"
           >
             <option selected value="unselected">전화번호</option>
             <option value="010">010</option>
@@ -78,9 +88,9 @@
             <option value="019">019</option>
           </select>
           <span class="input-group-text" id="basic-addon1">-</span>
-          <input type="text" class="form-control" name="" id="phoneNumberMid" />
+          <input type="text" class="form-control" name="user_phone_number_mid" id="user_phone_number_mid" />
           <span class="input-group-text" id="basic-addon1">-</span>
-          <input type="text" class="form-control" name="" id="phoneNumberEnd" />
+          <input type="text" class="form-control" name="user_phone_number_end" id="user_phone_number_end" />
         </div>
         <div class="m-4 row">
           <button type="submit" class="col btn btn-primary m-3">
@@ -97,9 +107,7 @@
       </form>
 
       <script>
-        function goToForgetId() {
-          location.href = './forgetid.html';
-        }
+        const goToForgetId = () => location.href = './forgetid.html';
       </script>
     </div>
   </body>

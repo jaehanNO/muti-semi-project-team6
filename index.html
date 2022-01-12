@@ -71,7 +71,7 @@
                 >
                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="./home.html"
+                      <a class="nav-link active" aria-current="page" href="./index.html"
                         >홈</a
                       >
                     </li>
@@ -210,6 +210,8 @@
                   type="text"
                   class="form-control"
                   placeholder="사용하실 ID를 입력하세요."
+                  name = "user_id"
+                  id = "user_id"
                 />
               </div>
               <div class="input-group mb-3">
@@ -217,6 +219,8 @@
                   type="text"
                   class="form-control"
                   placeholder="사용하실 비밀번호를 입력하세요."
+                  name = "user_pw"
+                  id = "user_pw"
                 />
               </div>
               <div class="input-group mb-3">
@@ -224,6 +228,8 @@
                   type="text"
                   class="form-control"
                   placeholder="비밀번호 확인"
+                  name = "user_pw_check"
+                  id = "user_pw_check"
                 />
               </div>
               <div class="input-group mb-3">
@@ -231,9 +237,11 @@
                   type="text"
                   class="form-control"
                   placeholder="이메일 주소"
+                  name = "user_emailid"
+                  id = "user_emailid"
                 />
                 <span class="input-group-text">@</span>
-                <select class="form-select form-select-sm">
+                <select class="form-select form-select-sm" name="user_emailweb" id="user_emailweb">
                   <option selected value="gmail.com">gmail.com</option>
                   <option value="naver.com">naver.com</option>
                   <option value="outlook.com">outlook.com</option>
